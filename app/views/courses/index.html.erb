@@ -1,0 +1,11 @@
+<% if @courses.empty? %>
+  Nenhum curso disponível
+<% end %>
+<% @courses.each do |course| %>
+    <%= link_to course.name, course %>
+    <%= course.description %>
+    <%= course.code %>
+    <%= course.price_brl %>
+    <%= course.enrollment_deadline %>
+<% end %>
+<%= link_to 'Voltar', root_path%>
