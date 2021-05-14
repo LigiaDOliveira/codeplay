@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_13_215431) do
+ActiveRecord::Schema.define(version: 2021_05_14_222809) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
-    t.string "description"
     t.string "code"
-    t.integer "price"
-    t.string "enrollment_deadline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "price"
+    t.text "description"
+    t.date "enrollment_deadline"
   end
 
 end
