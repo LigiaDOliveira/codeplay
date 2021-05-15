@@ -13,8 +13,15 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
-    @course.save
-    redirect_to @course
+    if @course.save
+      redirect_to @course
+    else
+      flash[:error_new]=[]
+      @course.errors.each do |error|
+        flash[:error_new] << error.message
+      end
+      render :new
+    end
   end
 
   def course_params
