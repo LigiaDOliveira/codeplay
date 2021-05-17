@@ -1,0 +1,11 @@
+<% if @docents.empty? %>
+  <p>Nenhum professor cadastrado</p>
+<% end %>
+<% @docents.each do |docent| %>
+    <h1><%= link_to docent.name, docent %></h1>
+    <p><%= docent.email %></p>
+    <p><%= docent.bio %></p>
+    <p><%= image_tag docent.profile_picture %></p>
+<% end %>
+<p><%= link_to 'Voltar', root_path%></p>
+<p><%= link_to 'Registrar um Professor', new_docent_path %></p>
