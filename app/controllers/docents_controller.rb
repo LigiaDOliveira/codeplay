@@ -14,8 +14,15 @@ class DocentsController < ApplicationController
 
   def create
     @docent = Docent.new(docent_params)
-    @docent.save
-    redirect_to @docent
+    if @docent.save
+      redirect_to @docent
+    else
+      flash[:error_new]=[]
+      @docent.errors.each do |error|
+        flash[:error_new] << error.message
+      end
+      render :new
+    end
   end
 
   private

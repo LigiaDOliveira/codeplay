@@ -1,0 +1,12 @@
+<%= form_for @docent do |f| %>
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+  <%= f.label :bio, 'Descrição' %>
+  <%= f.text_area :bio %>
+  <%= f.label :email, 'Email' %>
+  <%= f.text_field :email %>
+  <%= f.label :profile_picture, 'Foto de perfil' %>
+  <%= f.file_field :profile_picture %>
+  <%= f.submit 'Cadastrar Professor' %>
+<%end %>
+<%= flash[:error_new] %>
