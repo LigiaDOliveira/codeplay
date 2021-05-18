@@ -3,4 +3,4 @@
 <p><%= @docent.bio %></p>
 <p><%= image_tag @docent.profile_picture %></p>
 <p><%= link_to 'Voltar', docents_path %></p>
-<p><%= link_to 'Editar', edit_docent_path %></p>
+<p><%= link_to 'Editar', edit_docent_path(@docent) %></p>
