@@ -47,7 +47,7 @@ describe 'Admin registers docents' do
     expect(page).to have_content('não pode ficar em branco', count: 2)
   end
 
-  it 'and code must be unique' do
+  it 'and email must be unique' do
     ednaldo = Docent.create!(name: 'Ednaldo Pereira', email: 'ednaldo@pereira.com', 
                    bio: 'Um professor chamado Ednaldo Pereira')
     ednaldo.profile_picture.attach(io: File.open('./spec/files/ednaldo-pereira.png'),
