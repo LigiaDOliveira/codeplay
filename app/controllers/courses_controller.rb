@@ -42,6 +42,13 @@ class CoursesController < ApplicationController
     end
   end
 
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    flash[:notice] = 'Curso apagado com sucesso'
+    redirect_to courses_path
+  end
+
   private
     def course_params
       params.require(:course).permit(:name,:description,:code,:price,:enrollment_deadline)
