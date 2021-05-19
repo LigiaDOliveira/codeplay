@@ -42,6 +42,13 @@ class DocentsController < ApplicationController
     end
   end
 
+  def destroy
+    @docent = Docent.find(params[:id])
+    @docent.destroy
+    flash[:notice] = 'Professor descadastrado com sucesso'
+    redirect_to docents_path 
+  end
+
   private
     def docent_params
       params.require(:docent).permit(:name,:bio,:email,:profile_picture)

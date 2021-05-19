@@ -4,3 +4,4 @@
 <p><%= image_tag @docent.profile_picture %></p>
 <p><%= link_to 'Voltar', docents_path %></p>
 <p><%= link_to 'Editar', edit_docent_path(@docent) %></p>
+<p><%= link_to 'Descadastrar', @docent, method: :delete %></p>
