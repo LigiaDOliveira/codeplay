@@ -76,4 +76,14 @@ describe 'Admin view docents' do
     expect(current_path).to eq docents_path
   end
 
+  it 'and attach default profile picture if none specified' do
+    professor = Docent.create!(name: 'Professor Default', email: 'default@docent.com', 
+                               bio: 'Um professor chamado Professor Default')
+    visit root_path
+    click_on 'Professores'
+    click_on 'Professor Default'
+
+    expect(page).to have_css("img[src*='default.png']")
+  end
+
 end
