@@ -7,11 +7,11 @@ describe 'Admin view courses' do
     jorge.profile_picture.attach(io: File.open('./spec/files/jorge-dazai.jpg'),filename: 'jorge-dazai.jpg') 
     Course.create!(name: 'Ruby', description: 'Um curso de Ruby',
                    code: 'RUBYBASIC', price: 10,
-                   enrollment_deadline: '22/12/2033', instructor: jorge)
+                   enrollment_deadline: '22/12/2033', docent: jorge)
     Course.create!(name: 'Ruby on Rails',
                    description: 'Um curso de Ruby on Rails',
                    code: 'RUBYONRAILS', price: 20,
-                   enrollment_deadline: '20/12/2033', instructor: jorge)
+                   enrollment_deadline: '20/12/2033', docent: jorge)
 
     visit root_path
     click_on 'Cursos'
@@ -30,11 +30,11 @@ describe 'Admin view courses' do
     jorge.profile_picture.attach(io: File.open('./spec/files/jorge-dazai.jpg'),filename: 'jorge-dazai.jpg') 
     Course.create!(name: 'Ruby', description: 'Um curso de Ruby',
                    code: 'RUBYBASIC', price: 10,
-                   enrollment_deadline: '22/12/2033', instructor: jorge)
+                   enrollment_deadline: '22/12/2033', docent: jorge)
     Course.create!(name: 'Ruby on Rails',
                    description: 'Um curso de Ruby on Rails',
                    code: 'RUBYONRAILS', price: 20,
-                   enrollment_deadline: '20/12/2033', instructor: jorge)
+                   enrollment_deadline: '20/12/2033', docent: jorge)
 
     visit root_path
     click_on 'Cursos'
@@ -61,7 +61,7 @@ describe 'Admin view courses' do
     jorge.profile_picture.attach(io: File.open('./spec/files/jorge-dazai.jpg'),filename: 'jorge-dazai.jpg') 
     Course.create!(name: 'Ruby', description: 'Um curso de Ruby',
                    code: 'RUBYBASIC', price: 10,
-                   enrollment_deadline: '22/12/2033', instructor: jorge)
+                   enrollment_deadline: '22/12/2033', docent: jorge)
 
     visit root_path
     click_on 'Cursos'
@@ -76,7 +76,7 @@ describe 'Admin view courses' do
     jorge.profile_picture.attach(io: File.open('./spec/files/jorge-dazai.jpg'),filename: 'jorge-dazai.jpg') 
     Course.create!(name: 'Ruby', description: 'Um curso de Ruby',
                    code: 'RUBYBASIC', price: 10,
-                   enrollment_deadline: '22/12/2033', instructor: jorge)
+                   enrollment_deadline: '22/12/2033', docent: jorge)
 
     visit root_path
     click_on 'Cursos'
