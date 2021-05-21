@@ -2,6 +2,7 @@
 <h1><%= @course.name %></h1>
 <p><%= @course.description %></p>
 <p><%= @course.code %></p>
+<p><%= @course.docent.name %></p>
 <p><%= number_to_currency @course.price,unit:'R$ ',separator:',',delimiter:'.' %></p>
 <p><%= @course.enrollment_deadline.strftime('%d/%m/%Y') %></p>
 <p><%= link_to 'Voltar', courses_path %></p>

@@ -5,6 +5,8 @@
   <%= f.text_area :description %>
   <%= f.label :code, 'Código' %>
   <%= f.text_field :code %>
+  <%= f.label :docent_id, 'Professor' %>
+  <%= f.collection_select :docent_id, @docents, :id, :name %>
   <%= f.label :price, 'Preço' %>
   <%= f.number_field :price %>
   <%= f.label :enrollment_deadline, 'Data limite de matrícula' %>
