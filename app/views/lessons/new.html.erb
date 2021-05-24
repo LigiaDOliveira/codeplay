@@ -1,0 +1,11 @@
+<h1>Cadastrar uma aula</h1>
+
+<%= form_with model: [@course, @lesson] do |f|%>
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+  <%= f.label :duration, 'Duração' %>
+  <%= f.number_field :duration, step: 1, min: 0 %>
+  <%= f.label :body, 'Conteúdo' %>
+  <%= f.text_area :body %>
+  <%= f.submit 'Cadastrar' %>
+<%end %>

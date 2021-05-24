@@ -24,4 +24,12 @@ describe 'Admin views lessons' do
     expect(page).to_not have_text('Aula para não ver')
     expect(page).to_not have_text('40 minutos')
   end
+
+  xit 'and does not have lessons' do
+    
+  end
+
+  xit 'and view content' do
+    
+  end
 end
