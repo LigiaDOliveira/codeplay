@@ -5,6 +5,11 @@
 <p><%= @course.docent.name %></p>
 <p><%= number_to_currency @course.price,unit:'R$ ',separator:',',delimiter:'.' %></p>
 <p><%= @course.enrollment_deadline.strftime('%d/%m/%Y') %></p>
+<h2>Aula(s) do curso</h2>
+<p><%= @course.lessons.each do |lesson| %></p>
+  <p><%= link_to lesson.name, '#' %></p>
+  <p><%= lesson.duration %> minutos</p>
+<% end%>
 <p><%= link_to 'Voltar', courses_path %></p>
 <p><%= link_to 'Editar', edit_course_path(@course) %></p>
 <p><%= link_to 'Apagar', @course, method: :delete%></p>

@@ -3,4 +3,5 @@ class Course < ApplicationRecord
     :price, presence: {message: 'não pode ficar em branco'}
   validates :code, uniqueness: {message: 'já está em uso'}
   belongs_to :docent
+  has_many :lessons
 end
