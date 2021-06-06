@@ -8,8 +8,23 @@ pt-BR:
     attributes:
       user:
         password: Senha
-        password_confirmation: Confirmação de Senha
+        password_confirmation: Confirmação de senha
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: precisa ser igual à senha
+            email:
+              taken: já está em uso
+              blank: não pode ficar em branco
+            password:
+              blank: não pode ficar em branco
+
   devise:
     registrations:
       new:
         submit: Criar conta
+    sessions:
+      new:
+        submit: Entrar
